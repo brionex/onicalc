@@ -1,0 +1,79 @@
+---
+const {title} = Astro.props
+---
+
+<a href="#">
+  <article class="card">
+
+    <div class="icon">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        stroke="currentColor"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M4 3m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+        ></path><path
+          d="M8 7m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z"
+        ></path><path d="M8 14l0 .01"></path><path d="M12 14l0 .01"></path><path
+          d="M16 14l0 .01"></path><path d="M8 17l0 .01"></path><path d="M12 17l0 .01"
+        ></path><path d="M16 17l0 .01"></path></svg
+      >
+    </div>
+
+    <h3 class="title">{title ? title : 'no title'}</h3>
+  </article>
+</a>
+
+<style>
+  .card {
+    height: 150px;
+    background-color: #1e293b;
+    border-radius: 10px;
+    border: 2px solid #6f788755;
+    overflow: hidden;
+    position: relative;
+
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+
+    transition: transform .2s;
+  }
+
+  .icon {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    padding: 10px;
+  }
+
+  .icon svg {
+    opacity: .02;
+    width: 150px;
+    height: auto;
+    transform: rotate(-20deg);
+  }
+
+  .card .title {
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    background-color: #151d2a;
+  }
+
+  .card:active {
+    transform: scale(1);
+  }
+</style>

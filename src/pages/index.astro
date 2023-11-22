@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TopHeader from '../components/TopHeader.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="MultiCalc">
+	
+	<TopHeader />
+
+	<section class="mt-10">
+		<Card title="Calcular IVA" />
+		<Card title="Calcular IMC" />
+		<Card title="Convertir PX a REM" />
+		<Card title="Convertir PX a EM" />
+		<Card title="Convertir PX a Porcentaje" />
+		<Card title="Convertir PX a Base Unit" />
+	</section>
+
+</Layout>
+
+
+
+<style>
+	section {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+		gap: 20px;
+	}
+</style>

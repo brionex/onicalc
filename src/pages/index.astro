@@ -9,12 +9,35 @@ import Card from '../components/Card.astro';
 	<TopHeader />
 
 	<section class="mt-10">
-		<Card title="Calcular IVA" />
-		<Card title="Calcular IMC" />
-		<Card title="Convertir PX a REM" />
-		<Card title="Convertir PX a EM" />
-		<Card title="Convertir PX a Porcentaje" />
-		<Card title="Convertir PX a Base Unit" />
+		<Card 
+			title="Calcular IVA"
+			url="/calc_iva"
+		/>
+
+		<Card 
+			title="Calcular IMC"
+			url="/calc_imc" 
+		/>
+
+		<Card 
+			title="Convertir PX a REM"
+			url="/calc_pxtorem" 
+		/>
+
+		<Card 
+			title="Convertir PX a EM" 
+			url="/calc_pxtoem"
+		/>
+		
+		<Card 
+			title="Convertir PX a Porcentaje"
+			url="/calc_pxtopercentage" 
+		/>
+		
+		<Card 
+			title="Convertir PX a Base Unit" 
+			url="/calc_pxtobaseunit"	
+		/>
 	</section>
 
 </Layout>

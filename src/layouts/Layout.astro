@@ -13,14 +13,14 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="favicon.png" />
-		<link rel="stylesheet" href="fonts/fonts.css">
+		<link rel="stylesheet" href="/fonts/fonts.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
 		
 
-		<main class="mx-auto max-w-[90%]">
+		<main class="mx-auto w-[90%] sm:w-[80%]">
 			<slot />
 		</main>
 
@@ -32,18 +32,17 @@ const { title } = Astro.props;
 	
 	html {
 		font-family: 'Fredoka', system-ui, sans-serif;
-		background: #0c1222;
+		@apply bg-dark-blue;
 		background-size: 224px;
-		color: #fff;
+		@apply text-white
 	}
 
 	::-webkit-scrollbar {
-		background-color: #151d2a;
+		@apply bg-dark-blue;
 	}
 
 	::-webkit-scrollbar-thumb {
-		background-color: #6f788755;
+		@apply bg-dark-navy-blue
 	}
-
 
 </style>

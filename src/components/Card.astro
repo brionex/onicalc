@@ -9,7 +9,6 @@ const {title, url} = Astro.props
 
 <a href={url}>
   <article class="card">
-
     <div class="icon">
       <svg
         width="24"
@@ -29,8 +28,10 @@ const {title, url} = Astro.props
         ></path><path d="M16 17l0 .01"></path></svg
       >
     </div>
-
-    <h3 class="title">{title ? title : 'no title'}</h3>
+    
+    <h3 class="title">
+      {title ? title : 'no title'}
+    </h3>
   </article>
 </a>
 

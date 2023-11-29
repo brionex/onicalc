@@ -1,47 +1,77 @@
 ---
 interface Props {
-	title: string;
+  title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="favicon.png" />
-		<link rel="stylesheet" href="/fonts/fonts.css">
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-
-		<main class="mx-auto w-[90%] sm:w-[80%]">
-			<slot />
-		</main>
-
-
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <main class="mx-auto w-[90%] sm:w-[80%]">
+      <slot />
+    </main>
+  </body>
 </html>
+
 <style is:global>
-	@tailwind utilities;
-	
+  @tailwind utilities;
+
 	html {
-		font-family: 'Fredoka', system-ui, sans-serif;
-		@apply bg-dark-blue;
-		background-size: 224px;
-		@apply text-white
-	}
+    font-family: 'Fredoka', system-ui, sans-serif;
+    @apply bg-dark-blue;
+    background-size: 224px;
+    @apply text-white;
+  }
 
-	::-webkit-scrollbar {
-		@apply bg-dark-blue;
-	}
+  ::-webkit-scrollbar {
+    @apply bg-dark-blue;
+  }
 
-	::-webkit-scrollbar-thumb {
-		@apply bg-dark-navy-blue
-	}
+  ::-webkit-scrollbar-thumb {
+    @apply bg-dark-navy-blue;
+  }
+
+  @font-face {
+    font-family: 'Fredoka';
+    src: url('/fonts/fredoka/Fredoka-Light.ttf') format('truetype');
+		font-style: normal;
+    font-weight: 300;
+		font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Fredoka';
+    src: url('/fonts/fredoka/Fredoka-Regular.ttf') format('truetype');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Fredoka';
+    src: url('/fonts/fredoka/Fredoka-Medium.ttf') format('truetype');
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: 'Fredoka';
+    src: url('/fonts/fredoka/Fredoka-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: 'Fredoka';
+    src: url('/fonts/fredoka/Fredoka-Bold.ttf') format('truetype');
+    font-weight: 700;
+  }
+
 
 </style>

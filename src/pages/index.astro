@@ -2,44 +2,43 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 
-const baseurl = import.meta.env.BASE_URL
-
+const BASE_URL = import.meta.env.BASE_URL
 ---
 
-<Layout title="MultiCalc">
+<Layout title="Multicalc">
 	
 	
 
 	<section class="mt-10">
 
 		<Card 
-			title="Calcular IVA"
-			url={`${baseurl}/calc_iva`}
+			text="Calcular IVA"
+			url="/calc-iva"
 		/>
 
 		<Card 
-			title="Calcular IMC"
-			url="/calc_imc" 
+			text="Calcular IMC"
+			url="/calc-imc" 
 		/>
 
 		<Card 
-			title="Convertir PX a REM"
-			url="/calc_pxtorem" 
+			text="Convertir PX a REM"
+			url="/calc-pxtorem" 
 		/>
 
 		<Card 
-			title="Convertir PX a EM" 
-			url="/calc_pxtoem"
+			text="Convertir PX a EM" 
+			url="/calc-pxtoem"
 		/>
 		
 		<Card 
-			title="Convertir PX a Porcentaje"
-			url="/calc_pxtopercentage" 
+			text="Convertir PX a Porcentaje"
+			url="/calc-pxtopercentage" 
 		/>
 		
 		<Card 
-			title="Convertir PX a Base Unit" 
-			url="/calc_pxtobaseunit"	
+			text="Convertir PX a Base Unit" 
+			url="/calc-pxtobaseunit"	
 		/>
 
 	</section>

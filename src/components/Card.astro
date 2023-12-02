@@ -1,13 +1,14 @@
 ---
 interface Props {
-  url: string;
-  title: string
+  url: string
+  text: string
 }
 
-const {title, url} = Astro.props
+const { text, url } = Astro.props
+const BASE_URL = import.meta.env.BASE_URL
 ---
 
-<a href={url}>
+<a href={`${BASE_URL}${url}`}>
   <article class="card">
     <div class="icon">
       <svg
@@ -24,23 +25,25 @@ const {title, url} = Astro.props
         ></path><path
           d="M8 7m0 1a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-6a1 1 0 0 1 -1 -1z"
         ></path><path d="M8 14l0 .01"></path><path d="M12 14l0 .01"></path><path
-          d="M16 14l0 .01"></path><path d="M8 17l0 .01"></path><path d="M12 17l0 .01"
-        ></path><path d="M16 17l0 .01"></path></svg
+          d="M16 14l0 .01"></path><path d="M8 17l0 .01"></path><path
+          d="M12 17l0 .01"></path><path d="M16 17l0 .01"></path></svg
       >
     </div>
-    
-    <h3 class="title">
-      {title ? title : 'no title'}
+
+    <h3 class="description">
+      {text ? text : 'no description'}
     </h3>
   </article>
 </a>
 
 <style>
+  @tailwind utilities;
+
   .card {
     height: 150px;
     background-color: #1e293b;
     border-radius: 10px;
-    border: 2px solid #6f788755;
+    border: 1px solid #6f788755;
     overflow: hidden;
     position: relative;
 
@@ -48,7 +51,7 @@ const {title, url} = Astro.props
     place-items: center;
     cursor: pointer;
 
-    transition: transform .2s;
+    transition: transform 0.2s;
   }
 
   .icon {
@@ -59,25 +62,25 @@ const {title, url} = Astro.props
   }
 
   .icon svg {
-    opacity: .02;
+    opacity: 0.02;
     width: 150px;
     height: auto;
     transform: rotate(-20deg);
   }
 
-  .card .title {
+  .card .description {
     text-align: center;
-    font-weight: 500;
-    text-transform: uppercase;
+    font-weight: 600;
     letter-spacing: 4px;
-    font-size: 18px;
+    font-size: 1.2rem;
     padding: 20px;
     font-family: 'Quicksand';
   }
 
   .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     background-color: #151d2a;
+    @apply border-blue text-blue;
   }
 
   .card:active {

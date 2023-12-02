@@ -1,17 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import TopHeader from '../components/TopHeader.astro';
 import Card from '../components/Card.astro';
+
+const baseurl = import.meta.env.BASE_URL
+
 ---
 
 <Layout title="MultiCalc">
 	
-	<TopHeader />
+	
 
 	<section class="mt-10">
+
 		<Card 
 			title="Calcular IVA"
-			url="/calc_iva"
+			url={`${baseurl}/calc_iva`}
 		/>
 
 		<Card 
@@ -38,6 +41,7 @@ import Card from '../components/Card.astro';
 			title="Convertir PX a Base Unit" 
 			url="/calc_pxtobaseunit"	
 		/>
+
 	</section>
 
 </Layout>

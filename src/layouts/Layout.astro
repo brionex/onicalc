@@ -1,4 +1,11 @@
 ---
+import '../assets/fonts/fredoka/fredoka.css'
+import '../assets/fonts/quicksand/quicksand.css'
+import TopHeader from '../components/TopHeader.astro'
+
+
+const BASE_URL = import.meta.env.BASE_URL
+
 interface Props {
   title: string
 }
@@ -12,12 +19,14 @@ const { title } = Astro.props
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href={`${BASE_URL}/favicon.png`} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
     <main class="mx-auto w-[90%] sm:w-[80%]">
+      <TopHeader />
+
       <slot />
     </main>
   </body>
@@ -40,38 +49,5 @@ const { title } = Astro.props
   ::-webkit-scrollbar-thumb {
     @apply bg-dark-navy-blue;
   }
-
-  @font-face {
-    font-family: 'Fredoka';
-    src: url('/fonts/fredoka/Fredoka-Light.ttf') format('truetype');
-		font-style: normal;
-    font-weight: 300;
-		font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Fredoka';
-    src: url('/fonts/fredoka/Fredoka-Regular.ttf') format('truetype');
-    font-weight: 400;
-  }
-
-  @font-face {
-    font-family: 'Fredoka';
-    src: url('/fonts/fredoka/Fredoka-Medium.ttf') format('truetype');
-    font-weight: 500;
-  }
-
-  @font-face {
-    font-family: 'Fredoka';
-    src: url('/fonts/fredoka/Fredoka-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-  }
-
-  @font-face {
-    font-family: 'Fredoka';
-    src: url('/fonts/fredoka/Fredoka-Bold.ttf') format('truetype');
-    font-weight: 700;
-  }
-
 
 </style>

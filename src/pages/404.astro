@@ -1,13 +1,23 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro'
+
+const BASE_URL = import.meta.env.BASE_URL
 ---
 
-
 <Layout title="404 page not found">
-  <div class="grid h-screen place-items-center gap-10">
-    <img
-      class="w-full max-w-[80%] h-[500px] object-cover rounded-[20px]"
-      src="/public/images/404.gif"
+  <div class="grid h-full place-items-center gap-10">
+    <p class="text-8xl font-[700]">404</p>
+    <p class="text-xl">No se encontro el recurso</p>
+    <a
+      href={`${BASE_URL}`}
+      class="bg-slate-600 px-5 py-3 rounded font-[600] hover:bg-blue">Volver al inicio</a
     >
   </div>
 </Layout>
+
+<style>
+  div {
+    margin-top: 40px;
+    font-family: Quicksand;
+  }
+</style>

@@ -1,17 +1,21 @@
 ---
+import { BASE_URL } from '../assets/js/constants.js'
+
 interface Props {
   url: string
   text: string
 }
 
 const { text, url } = Astro.props
-const BASE_URL = import.meta.env.BASE_URL
 ---
 
 <a href={`${BASE_URL}${url}`}>
-  <article class="card">
-    <div class="icon">
+  <article
+    class="h-[150px] bg-dark-gunmetal-blue rounded-xl overflow-hidden relative grid place-items-center hover:scale-[1.01] border border-dark-slate-blue hover:bg-dark-ink-blue hover:text-sky-blue hover:border-sky-blue transition-colors"
+  >
+    <div class="absolute -top-[40px] -left-[40px]">
       <svg
+        class="opacity-[.03] w-[150px] h-auto -rotate-12"
         width="24"
         height="24"
         viewBox="0 0 24 24"
@@ -30,60 +34,9 @@ const BASE_URL = import.meta.env.BASE_URL
       >
     </div>
 
-    <h3 class="description">
+    <p class="p-5 text-center font-[500] text-lg">
       {text ? text : 'no description'}
-    </h3>
+    </p>
   </article>
 </a>
 
-<style>
-  @tailwind utilities;
-
-  .card {
-    height: 150px;
-    background-color: #1e293b;
-    border-radius: 10px;
-    border: 1px solid #6f788755;
-    overflow: hidden;
-    position: relative;
-
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-
-    transition: transform 0.2s;
-  }
-
-  .icon {
-    position: absolute;
-    top: -20%;
-    left: -20%;
-    padding: 10px;
-  }
-
-  .icon svg {
-    opacity: 0.02;
-    width: 150px;
-    height: auto;
-    transform: rotate(-20deg);
-  }
-
-  .card .description {
-    text-align: center;
-    font-weight: 600;
-    letter-spacing: 4px;
-    font-size: 1.2rem;
-    padding: 20px;
-    font-family: 'Quicksand';
-  }
-
-  .card:hover {
-    transform: scale(1.02);
-    background-color: #151d2a;
-    @apply border-blue text-blue;
-  }
-
-  .card:active {
-    transform: scale(1);
-  }
-</style>

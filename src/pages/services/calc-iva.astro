@@ -1,15 +1,49 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-
-
-
+import Layout from '../../layouts/Layout.astro'
+import Field from '../../components/Field.astro'
 ---
 
-
 <Layout title="Calc iva">
+  <h1 class="text-center text-3xl mt-5 font-[600]">Calculadora de IVA</h1>
 
-
-  <h1>Calcular iva</h1>
-
-
+  <article class=" max-w-[500px] mx-auto mt-10 ">
+    <div class="f1">
+      <Field label="Neto" type="number" />
+    </div>
+    <div class="f2">
+      <Field label="Iva" type="number" />
+    </div>
+    <div class="f3">
+      <Field label="Bruto (incl. impuestos)" type="number" />
+    </div>
+    <div class="f4">
+      <Field label="Monto de impuestos" type="number" />
+    </div>
+  </article>
 </Layout>
+
+
+<style>
+  article {
+    display: grid;
+    grid-template-areas: 
+      "f1 f1 f1"
+      "f2 f3 f3"
+      "f4 f4 f4"
+    ;
+    gap: 20px;
+  }
+
+  .f1 {
+    grid-area: f1;
+  }
+  .f2 {
+    grid-area: f2;
+  }
+  .f3 {
+    grid-area: f3;
+  }
+  .f4 {
+    grid-area: f4;
+  }
+</style>

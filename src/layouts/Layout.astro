@@ -1,6 +1,8 @@
 ---
-import '../assets/fonts/fredoka.css'
+import { BASE_URL } from '../assets/js/constants.js'
+import '../assets/fonts/inter.css'
 import '../assets/fonts/quicksand.css'
+
 import TopHeader from '../components/TopHeader.astro'
 
 interface Props {
@@ -8,7 +10,6 @@ interface Props {
 }
 
 const { title } = Astro.props
-const BASE_URL = import.meta.env.BASE_URL
 ---
 
 <!doctype html>
@@ -22,8 +23,16 @@ const BASE_URL = import.meta.env.BASE_URL
     <title>{title}</title>
   </head>
   <body>
-    <main class="mx-auto w-[90%] sm:w-[80%]">
-      <TopHeader />
+    <!-- Gradient -->
+    <div
+      class="bg-gradient fixed top-0 left-0 -z-10 w-full h-screen overflow-hidden flex justify-center before:relative before:top-[50%] before:min-w-[200%] before:h-[200%] before:bg-gradient-to-r before:from-sky-blue before:to-sky-blue"
+    >
+    </div>
+    <!--------------------------->
+
+    <TopHeader />
+
+    <main class="mx-auto w-[90%] sm:w-[80%] relative">
       <slot />
     </main>
   </body>
@@ -32,23 +41,30 @@ const BASE_URL = import.meta.env.BASE_URL
 <style is:global>
   @tailwind utilities;
 
-	html {
-    font-family: 'Fredoka', system-ui, sans-serif;
-    @apply bg-dark-blue;
-    background-size: 224px;
-    @apply text-white;
+  html {
+    scrollbar-gutter: 15px;
+    @apply bg-dark-ink-blue font-quicksand text-light-blue;
   }
 
   ::-webkit-scrollbar {
-    @apply bg-dark-blue;
+    @apply bg-dark-ink-blue w-[15px];
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-dark-navy-blue;
+    @apply bg-dark-slate-blue;
   }
 
-  .line {
-    outline: 1px solid red;
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
   }
 
+  .bg-gradient::before {
+    -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.45), transparent 70%);
+    mask-image: radial-gradient(rgba(0, 0, 0, 0.45), transparent 70%);
+  }
 </style>

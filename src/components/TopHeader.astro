@@ -1,7 +1,13 @@
-<header class="h-[70px] flex items-center">
+---
+import { BASE_URL } from '../assets/js/constants.js'
+---
 
-  <h1 class="text-2x font-[500] text-xl tracking-[2px]">
-    Multi<span class="text-2xl text-blue">Calc</span>
-  </h1>
-
+<header
+  class="h-[60px] flex items-center px-5 bg-dark-ink-blue/20 backdrop-blur-md sticky top-0 z-10"
+>
+  <a href={`${BASE_URL}/`}>
+    <p class="text-2x font-[700] text-xl tracking-[2px]">
+      Multi<span class="text-2xl text-sky-blue">Calc</span>
+    </p>
+  </a>
 </header>

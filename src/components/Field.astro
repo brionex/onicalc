@@ -1,0 +1,16 @@
+---
+interface Props {
+  type: 'text' | 'number' | 'email'
+  label: string
+}
+
+const { type, label } = Astro.props
+---
+
+<label class="group flex flex-col text-2xl font-[500] text-center gap-2">
+  {label}
+  <input
+    class="bg-dark-gunmetal-blue outline-none p-3 rounded-lg border border-slate-blue w-full text-3xl focus:border-sky-blue hover:border-blue-gray group:text-sky-blue"
+    type={type}
+  />
+</label>

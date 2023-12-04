@@ -7,10 +7,10 @@ interface Props {
 const { type, label } = Astro.props
 ---
 
-<label class="group flex flex-col text-2xl font-[500] text-center gap-2">
+<label class="group flex flex-col text-xl font-[500] gap-2">
   {label}
   <input
-    class="bg-dark-gunmetal-blue outline-none p-3 rounded-lg border border-slate-blue w-full text-3xl focus:border-sky-blue hover:border-blue-gray group:text-sky-blue"
+    class="bg-dark-gunmetal-blue outline-none p-3 rounded-lg border border-slate-blue w-full text-3xl focus:border-sky-blue hover:border-blue-gray group:text-sky-blue flex-grow"
     type={type}
   />
 </label>

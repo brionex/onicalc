@@ -11,7 +11,7 @@ const { text, url } = Astro.props
 
 <a href={`${BASE_URL}${url}`}>
   <article
-    class="h-[150px] bg-dark-gunmetal-blue rounded-xl overflow-hidden relative grid place-items-center hover:scale-[1.01] border border-dark-slate-blue hover:bg-dark-ink-blue hover:text-sky-blue hover:border-sky-blue transition-colors"
+    class="h-[100px] bg-dark-gunmetal-blue rounded-xl overflow-hidden relative grid place-items-center hover:scale-[1.01] border border-dark-slate-blue hover:bg-dark-ink-blue hover:text-sky-blue hover:border-sky-blue transition-colors"
   >
     <div class="absolute -top-[40px] -left-[40px]">
       <svg
@@ -34,7 +34,7 @@ const { text, url } = Astro.props
       >
     </div>
 
-    <p class="p-5 text-center font-[500] text-lg">
+    <p class="p-5 text-center font-[500] text-xl">
       {text ? text : 'no description'}
     </p>
   </article>

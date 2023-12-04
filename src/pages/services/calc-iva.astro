@@ -4,43 +4,18 @@ import Field from '../../components/Field.astro'
 ---
 
 <Layout title="Calc iva">
-  <h1 class="text-center text-3xl mt-5 font-[600]">Calculadora de IVA</h1>
+  <h1 class="text-center text-2xl mt-5 font-[600]">Calculadora de IVA</h1>
 
-  <article class=" max-w-[500px] mx-auto mt-10 ">
-    <div class="f1">
+  <article class="max-w-[500px] mx-auto mt-10 grid gap-5">
+    <div class="flex-grow">
       <Field label="Neto" type="number" />
     </div>
-    <div class="f2">
+    <div class="flex gap-5">
       <Field label="Iva" type="number" />
-    </div>
-    <div class="f3">
       <Field label="Bruto (incl. impuestos)" type="number" />
     </div>
-    <div class="f4">
+    <div class="flex-grow">
       <Field label="Monto de impuestos" type="number" />
     </div>
   </article>
 </Layout>
-
-
-<style>
-  article {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .f1 {
-    width: 100%;
-  }
-  .f2 {
-    width: 20%;
-  }
-  .f3 {
-    width: 70%;
-  }
-  .f4 {
-    flex-grow: 1;
-  }
-</style>

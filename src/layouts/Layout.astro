@@ -1,10 +1,9 @@
 ---
-import { BASE_URL } from '../assets/js/constants.js'
 import '../assets/fonts/inter.css'
-import '../assets/fonts/quicksand.css'
-import { ViewTransitions } from 'astro:transitions'
+import '../assets/fonts/jet-brains-mono.css'
 
-import TopHeader from '../components/TopHeader.astro'
+import { ViewTransitions } from 'astro:transitions'
+import { BASE_URL } from '../js/constants.js'
 
 interface Props {
   title: string
@@ -25,48 +24,49 @@ const { title } = Astro.props
     <ViewTransitions />
   </head>
   <body>
-    <!-- Gradient -->
-    <div
-      class="bg-gradient fixed top-0 left-0 -z-10 w-full h-screen overflow-hidden flex justify-center before:relative before:top-[50%] before:min-w-[200%] before:h-[200%] before:bg-gradient-to-r before:from-sky-blue before:to-sky-blue"
-    >
-    </div>
-    <!--------------------------->
-
-    <TopHeader />
-
-    <main class="mx-auto w-[90%] sm:w-[80%] relative">
+    <main class="app">
       <slot />
     </main>
-  </body>
+
+    <!-- Wave -->
+    <div class="fixed bottom-0 -z-10">
+      <img
+        class="object-cover min-w-[1200px]"
+        src=`${BASE_URL}/src/assets/img/wave.svg`
+        alt="figure-of-bars"
+      />
+    </div>
+  </body><style is:global>
+    @tailwind utilities;
+
+    html {
+      scrollbar-gutter: 15px;
+      @apply bg-bg-100 font-jet-brains-mono text-text-100 font-[400];
+    }
+
+    ::-webkit-scrollbar {
+      @apply bg-bg-100 w-[15px];
+    }
+
+    ::-webkit-scrollbar-thumb {
+      @apply bg-bg-200;
+    }
+
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number']::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type='number'] {
+      -moz-appearance: textfield;
+    }
+
+    .app {
+      display: grid;
+      height: 100dvh;
+      overflow: hidden;
+      grid-template-columns: 250px 1fr;
+      grid-template-rows: 70px 1fr max-content;
+    }
+  </style>
 </html>
-
-<style is:global>
-  @tailwind utilities;
-
-  html {
-    scrollbar-gutter: 15px;
-    @apply bg-dark-ink-blue font-quicksand text-light-blue;
-  }
-
-  ::-webkit-scrollbar {
-    @apply bg-dark-ink-blue w-[15px];
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-dark-slate-blue;
-  }
-
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  input[type="number"] {
-    -moz-appearance: textfield;
-  }
-
-  .bg-gradient::before {
-    -webkit-mask-image: radial-gradient(rgba(0, 0, 0, 0.45), transparent 70%);
-    mask-image: radial-gradient(rgba(0, 0, 0, 0.45), transparent 70%);
-  }
-</style>

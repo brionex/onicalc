@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Jet-Brains-Mono';
+  src: url('./jet-brains-mono/JetBrainsMono-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Jet-Brains-Mono';
+  src: url('./jet-brains-mono/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Jet-Brains-Mono';
+  src: url('./jet-brains-mono/JetBrainsMono-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Jet-Brains-Mono';
+  src: url('jet-brains-mono/JetBrainsMono-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Jet-Brains-Mono';
+  src: url('./jet-brains-mono/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+}

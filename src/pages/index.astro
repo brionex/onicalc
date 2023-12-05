@@ -1,43 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Card from '../components/Card.astro'
+import Logo from '../components/Logo.astro'
+import TopHeader from '../components/TopHeader.astro'
+import SideNavigation from '../components/SideNavigation.astro';
 ---
 
-<Layout title="Multicalc">
-  <section>
-    <Card text="Calcular IVA" url="/services/calc-iva" />
+<Layout title="OniCalc">
 
-    <Card text="Calcular IMC" url="/calc-imc" />
+  <Logo />
+  <TopHeader />
+  <SideNavigation/>
 
-    <Card text="Convertir PX a REM" url="/calc-pxtorem" />
-
-    <Card text="Convertir PX a EM" url="/calc-pxtoem" />
-
-    <Card text="Convertir PX a Porcentaje" url="/calc-pxtopercentage" />
-
-    <Card text="Convertir PX a Base Unit" url="/calc-pxtobaseunit" />
-
-
-    <!-- Ejemplos -->
-    <Card text='' url=''></Card>
-    <Card text='' url=''></Card>
-    <Card text='' url=''></Card>
-    <Card text='' url=''></Card>
-    <Card text='' url=''></Card>
-    <Card text='' url=''></Card>
-    <Card text='' url=''></Card>
-    <Card text='' url=''></Card>
-    <Card text='' url=''></Card>
-
-
-  </section>
 </Layout>
 
 <style>
-  section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
-    gap: 20px;
-    margin: 40px 0 100px;
-  }
+
 </style>

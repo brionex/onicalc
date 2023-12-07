@@ -5,8 +5,8 @@ export default {
     extend: {
       colors: {
         'primary-100': '#1F3A5F',
-        'primary-200': '#687B9E',
-        'primary-300': '#7E90B4',
+        'primary-200': '#7E90B4',
+        'primary-300': '#9CAAC5',
         'accent-100': '#3D5A80',
         'accent-200': '#CEE8FF',
         'text-100': '#FFFFFF',

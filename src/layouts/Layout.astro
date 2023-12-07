@@ -36,37 +36,41 @@ const { title } = Astro.props
         alt="figure-of-bars"
       />
     </div>
-  </body><style is:global>
-    @tailwind utilities;
-
-    html {
-      scrollbar-gutter: 15px;
-      @apply bg-bg-100 font-jet-brains-mono text-text-100 font-[400];
-    }
-
-    ::-webkit-scrollbar {
-      @apply bg-bg-100 w-[15px];
-    }
-
-    ::-webkit-scrollbar-thumb {
-      @apply bg-bg-200;
-    }
-
-    input[type='number']::-webkit-inner-spin-button,
-    input[type='number']::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-    input[type='number'] {
-      -moz-appearance: textfield;
-    }
-
-    .app {
-      display: grid;
-      height: 100dvh;
-      overflow: hidden;
-      grid-template-columns: 250px 1fr;
-      grid-template-rows: 70px 1fr max-content;
-    }
-  </style>
+  </body>
 </html>
+
+
+
+<style is:global>
+  @tailwind utilities;
+
+  html {
+    scrollbar-gutter: 15px;
+    @apply bg-bg-100 font-jet-brains-mono text-text-100 font-[400];
+  }
+
+  ::-webkit-scrollbar {
+    @apply bg-bg-100 w-[15px];
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-bg-200;
+  }
+
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+  .app {
+    display: grid;
+    height: 100dvh;
+    overflow: hidden;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 70px 1fr max-content;
+  }
+</style>

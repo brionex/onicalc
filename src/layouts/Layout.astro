@@ -24,18 +24,11 @@ const { title } = Astro.props
     <ViewTransitions />
   </head>
   <body>
-    <main class="app"> 
+    <main 
+      class="bg-gradient-to-b from-from-bg to-to-bg h-screen overflow-auto font-inter"
+    > 
       <slot />
     </main>
-
-    <!-- Wave -->
-    <div class="fixed bottom-0 -z-10">
-      <img
-        class="object-cover min-w-[1200px]"
-        src=`${BASE_URL}/src/assets/img/wave.svg`
-        alt="figure-of-bars"
-      />
-    </div>
   </body>
 </html>
 
@@ -45,16 +38,13 @@ const { title } = Astro.props
   @tailwind utilities;
 
   html {
-    scrollbar-gutter: 15px;
-    @apply bg-bg-100 font-jet-brains-mono text-text-100 font-[400];
+    /* scrollbar-gutter: 15px; */
   }
 
   ::-webkit-scrollbar {
-    @apply bg-bg-100 w-[15px];
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-bg-200;
   }
 
   input[type='number']::-webkit-inner-spin-button,
@@ -64,13 +54,5 @@ const { title } = Astro.props
   }
   input[type='number'] {
     -moz-appearance: textfield;
-  }
-
-  .app {
-    display: grid;
-    height: 100dvh;
-    overflow: hidden;
-    grid-template-columns: 250px 1fr;
-    grid-template-rows: 70px 1fr max-content;
   }
 </style>

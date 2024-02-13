@@ -1,34 +1,26 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import TopHeader from '../components/TopHeader.astro'
-import BlockCalc from '../components/Anchor.astro'
+import Anchor from '../components/Anchor.astro'
 
 
 const listCalcs = [
-  'Vat Calcualdora',
-  'IVA Calculadora',
-  'calculadora 3',
+  {
+    'title': 'Vat Calcualdora',
+    'url': '/calc/vat'
+  }
 ]
 ---
 
 <Layout title="OniCalc">
-  <main
-    class="bg-gradient-to-b from-from-bg to-to-bg h-screen overflow-auto font-inter flex flex-col"
-  >
-    <TopHeader />
-
-    <section
-      class="mx-auto w-[80%] py-10 gap-5 text-lg place-items-start flex flex-grow"
+  <section
+      class="mx-auto w-[80%] py-10 gap-5 text-lg place-items-start flex flex-grow flex-wrap"
     >
-      {
-        listCalcs.map((item) => (
-          <BlockCalc name={item} />
-        ))
-      }
+      {listCalcs.map(calc => (
+        <Anchor url={calc.url} >{calc.title}</Anchor>
+      ))}
     </section>
 
     <section class="bg-midnight-blue h-[60px]"></section>
-  </main>
 </Layout>
 
 <style></style>

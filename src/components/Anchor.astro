@@ -1,0 +1,14 @@
+---
+interface Props {
+  name: string
+}
+
+const {name} = Astro.props
+---
+
+<a
+  href='/calc/vat'
+  class="text-steel-blue py-2 px-5 basis-[max-content] bg-midnight-blue border-2 border-dark-slate-blue rounded-xl hover:border-dodger-blue/50 cursor-pointer hover:text-white"
+>
+  {name ? name : "no name"}
+</a>

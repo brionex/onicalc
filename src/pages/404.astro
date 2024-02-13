@@ -1,7 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro'
-
-const BASE_URL = import.meta.env.BASE_URL
 ---
 
 <Layout title="404 page not found">
@@ -9,7 +7,7 @@ const BASE_URL = import.meta.env.BASE_URL
     <p class="text-8xl font-[700]">404</p>
     <p class="text-xl">No se encontro el recurso solicitado.</p>
     <a
-      href={`${BASE_URL}`}
+      href="/"
       class="bg-dark-slate-blue px-5 py-3 rounded font-[600] hover:bg-sky-blue hover:text-dark-ink-blue"
       >Volver al Inicio</a
     >

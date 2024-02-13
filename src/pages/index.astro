@@ -1,15 +1,34 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import TopHeader from '../components/TopHeader.astro'
-import SideNavigation from '../components/SideNavigation.astro';
+import BlockCalc from '../components/Anchor.astro'
+
+
+const listCalcs = [
+  'Vat Calcualdora',
+  'IVA Calculadora',
+  'calculadora 3',
+]
 ---
 
 <Layout title="OniCalc">
+  <main
+    class="bg-gradient-to-b from-from-bg to-to-bg h-screen overflow-auto font-inter flex flex-col"
+  >
+    <TopHeader />
 
-  <TopHeader />
-  <!-- <SideNavigation/> -->
+    <section
+      class="mx-auto w-[80%] py-10 gap-5 text-lg place-items-start flex flex-grow"
+    >
+      {
+        listCalcs.map((item) => (
+          <BlockCalc name={item} />
+        ))
+      }
+    </section>
 
+    <section class="bg-midnight-blue h-[60px]"></section>
+  </main>
 </Layout>
 
-<style>
-</style>
+<style></style>

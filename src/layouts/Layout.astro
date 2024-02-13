@@ -1,12 +1,16 @@
 ---
 import '../assets/fonts/inter.css'
 import '../assets/fonts/jet-brains-mono.css'
+import { BASE_URL } from '../js/constants'
 
 import { ViewTransitions } from 'astro:transitions'
 
 interface Props {
   title: string
 }
+
+
+console.log(BASE_URL)
 
 const { title } = Astro.props
 ---

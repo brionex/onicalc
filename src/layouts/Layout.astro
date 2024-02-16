@@ -3,6 +3,7 @@ import '../assets/fonts/inter.css'
 import '../assets/fonts/jet-brains-mono.css'
 
 import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 import { ViewTransitions } from 'astro:transitions'
 
 interface Props {
@@ -25,19 +26,26 @@ const { title } = Astro.props
   </head>
   <body>
     <main
-      class="bg-gradient-to-b from-from-bg to-to-bg min-h-screen font-inter flex flex-col"
+      class="bg-gradient-to-b from-from-bg to-to-bg h-full font-inter flex flex-col"
     >
       <Header />
       <slot />
+      <Footer />
     </main>
   </body>
 </html>
 
 
+
 <style is:global>
   @tailwind utilities;
 
+  body {
+    height: 100dvh;
+  }
+
   html {
+    
     /* scrollbar-gutter: 15px; */
   }
 

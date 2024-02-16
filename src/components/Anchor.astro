@@ -9,8 +9,8 @@ const {url} = Astro.props
 ---
 
 <a
-  href={`${BASE_URL}/calc/vat`}
-  class="text-steel-blue py-2 px-5 basis-[max-content] bg-midnight-blue border-2 border-dark-slate-blue rounded-xl hover:border-dodger-blue/50 cursor-pointer hover:text-white"
+  href={BASE_URL + url}
+  class="text-steel-blue py-2 px-5 basis-[max-content] bg-midnight-blue border-2 border-dark-slate-blue rounded-xl hover:border-dodger-blue/50 cursor-pointer hover:text-white transition-colors"
 >
   <slot>No name</slot>
 </a>

@@ -2,25 +2,31 @@
 import Layout from '../layouts/Layout.astro'
 import Anchor from '../components/Anchor.astro'
 
-
 const listCalcs = [
   {
-    'title': 'Vat Calcualdora',
-    'url': '/calc/vat'
-  }
+    title: 'Vat Calcualdora',
+    url: '/calc/vat',
+  },
+  {
+    title: 'Vat Calcualdora',
+    url: '/calc/vata',
+  },
 ]
 ---
 
 <Layout title="OniCalc">
   <section
-      class="mx-auto w-[80%] py-10 gap-5 text-lg place-items-start flex flex-grow flex-wrap"
-    >
-      {listCalcs.map(calc => (
-        <Anchor url={calc.url} >{calc.title}</Anchor>
-      ))}
-    </section>
+    class="mx-auto w-[80%] flex flex-col gap-16 text-lg flex-grow"
+  >
 
-    <section class="bg-midnight-blue h-[60px]"></section>
+    <h1 class="tex-center text-steel-blue font-jet-brains-mono sm:text-4xl w-[70%] text-center mx-auto font-[600]">
+      Calculadora Multifuncional, simple y efectiva
+    </h1>
+
+    <div class="place-items-start flex flex-wrap gap-5">
+      {listCalcs.map((calc) => <Anchor url={calc.url}>{calc.title}</Anchor>)}
+    </div>
+  </section>
 </Layout>
 
 <style></style>

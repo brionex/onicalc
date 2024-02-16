@@ -5,5 +5,5 @@ import tailwind from '@astrojs/tailwind'
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://lbrione.github.io',
-  base: 'onicalc',
+  // base: 'onicalc',
 })

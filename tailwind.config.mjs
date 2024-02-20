@@ -4,12 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'steel-blue': '#93A0C6',
-        'midnight-blue': '#0A0F20',
-        'dark-slate-blue': '#1F2A47',
-        'dodger-blue': '#3F8BF9',
-        'from-bg': '#0A0F1E',
-        'to-bg': '#18203F'
+        'midnight-blue': '#10151D',
+        'slate-gray': '#2C3646',
+        'steel-blue': '#7B8796',
+        'silver-gray': '#BFC7D2',
+        'dodger-blue': '#25A6E9',
       },
       fontFamily: {
         inter: ['Inter', 'system-ui'],

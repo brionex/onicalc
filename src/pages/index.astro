@@ -15,14 +15,11 @@ const listCalcs = [
 ---
 
 <Layout title="OniCalc">
+
+
   <section
     class="mx-auto w-[80%] flex flex-col gap-16 text-lg flex-grow"
   >
-
-    <h1 class="tex-center text-steel-blue font-jet-brains-mono sm:text-4xl w-[70%] text-center mx-auto font-[600]">
-      Calculadora Multifuncional, simple y efectiva
-    </h1>
-
     <div class="place-items-start flex flex-wrap gap-5">
       {listCalcs.map((calc) => <Anchor url={calc.url}>{calc.title}</Anchor>)}
     </div>

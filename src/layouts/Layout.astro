@@ -2,6 +2,8 @@
 import '../assets/fonts/inter.css'
 import '../assets/fonts/jet-brains-mono.css'
 
+import { BASE_URL } from '../js/constants'
+
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import { ViewTransitions } from 'astro:transitions'
@@ -22,15 +24,16 @@ const { title } = Astro.props
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+
+    <link rel="stylesheet" href={BASE_URL + "/icons/icons.css"}>
     <ViewTransitions />
   </head>
-  <body>
+  <body class="bg-midnight-blue">
     <main
-      class="bg-gradient-to-b from-from-bg to-to-bg h-full font-inter flex flex-col"
+      class="font-jet-brains-mono flex flex-col py-[60px] gap-[100px] h-full w-[70%] mx-auto"
     >
       <Header />
       <slot />
-      <Footer />
     </main>
   </body>
 </html>
@@ -45,7 +48,6 @@ const { title } = Astro.props
   }
 
   html {
-    
     /* scrollbar-gutter: 15px; */
   }
 

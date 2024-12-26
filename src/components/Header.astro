@@ -1,22 +1,23 @@
 ---
-import { BASE_URL } from "../js/constants";
+import { BASE_URL } from '@scripts/constants.js'
+import GitHub from '@icons/GitHub.svg'
 ---
 
-<header class="flex flex-col gap-5">
+<header class="flex flex-col gap-5 p-10">
   <div class="flex justify-between">
-    <h1 class="text-dodger-blue text-2xl font-[700]">
-      <a href={BASE_URL + '/'}>AsobiCalc</a>
+    <h1 class="font-mono text-xl font-[700]">
+      <a href={BASE_URL + '/'}>alucalc</a>
     </h1>
-    <div class="text-silver-gray flex gap-3 text-3xl *:p-5">
-      <a href="#" class="icon-github"></a>
-      <a href="#" class="icon-instagram"></a>
-      <a href="#" class="icon-linkedin"></a>
-      <a href="#" class="icon-Facebook"></a>
+
+    <div>
+      <a
+        href="https://github.com/brionex"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-white text-slate-400 relative before:absolute before:inset-0 before:block before:border before:scale-[0] before:rounded-full hover:before:scale-[1.8] before:transition-all duration-200"
+      >
+        <GitHub />
+      </a>
     </div>
   </div>
-  <p>
-    Herramientas de Cálculo en Línea, Simples y Eficientes.
-  </p>
 </header>
-
-<style></style>
